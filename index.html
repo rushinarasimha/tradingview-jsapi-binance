@@ -8,19 +8,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <script type="text/javascript" src="charting_library/charting_library/charting_library.min.js"></script>
+   <!--  <script type="text/javascript" src="charting_library/charting_library/charting_library.min.js"></script> -->charting-library-tutorial/charting_library_clonned_data/charting_library/charting_library.min.js
+   <!-- <script type="text/javascript" src="charting_library/charting_library.standalone.js"></script> -->
     <script type="text/javascript" src="datafeed.js"></script>
 
     <script type="text/javascript">
-        TradingView.onready(function () {
+        TradingView.widget.onReady(function () {
             var widget = window.tvWidget = new TradingView.widget({
                 debug: false, // uncomment this line to see Library errors and warnings in the console
                 fullscreen: true,
-                symbol: 'ETHUSDT',
-                interval: '60',
+                symbol: 'BTCUSDT',
+                interval: '1',
                 container_id: "tv_chart_container",
                 //	BEWARE: no trailing slash is expected in feed URL
-                datafeed: new BinanceDatafeed({ debug: false }),
+                datafeed: new BinanceDatafeed({ debug: false, testnet:true }),
                 library_path: "charting_library/charting_library/",
                 locale: "en",
                 //	Regression Trend-related functionality is not implemented yet, so it's hidden for a while

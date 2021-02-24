@@ -10,7 +10,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "proxy": "node binance-proxy.js",
+    "binance": "node binance-proxy.js binance",
+    "testnet": "node binance-proxy.js testnet",
     "serve": "http-server -p 8080 -c-1"
   },
   "repository": {
@@ -22,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/bergusman/tradingview-jsapi-binance/issues"
   },
-  "homepage": "https://github.com/bergusman/tradingview-jsapi-binance#readme"
+  "homepage": "https://github.com/bergusman/tradingview-jsapi-binance#readme",
+  "main": "binance-proxy.js"
 }

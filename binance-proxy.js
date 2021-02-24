@@ -8,8 +8,24 @@ const morgan = require('morgan')
 app.use(morgan('tiny'))
 
 const proxy = require('express-http-proxy')
-app.use('/', proxy('https://api.binance.com'))
+//app.use('/', proxy('https://api.binance.com'))
 
-app.listen(9090, () => {
-    console.log('Listening on 9090')
-})
+if(process.argv[2] == 'testnet')
+{
+    app.use('/',proxy('https://testnet.binancefuture.com'));
+    
+    app.listen(9090, () => {
+        console.log('Testnet Listening on 9090')
+    })
+     
+}
+else
+{
+
+    app.use('/', proxy('https://fapi.binance.com'))
+    
+    app.listen(9091, () => {
+        console.log('Real Binance.com Listening on 9091')
+    })
+
+}
