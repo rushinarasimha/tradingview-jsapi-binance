@@ -12,12 +12,17 @@ const proxy = require('express-http-proxy')
 
 if(process.argv[2] == 'testnet')
 {
-    app.use('/',proxy('https://testnet.binancefuture.com'));
-    
+    app.use('/',proxy('https://testnet.binancefuture.com'))
     app.listen(9090, () => {
         console.log('Testnet Listening on 9090')
     })
      
+}
+else if (process.argv[2] == "save"){
+    app.use('/', proxy('http://saveload.tradingview.com'))
+    app.listen(9089, () => {
+        console.log('Real Binance.com Listening on 9089')
+    })
 }
 else
 {
