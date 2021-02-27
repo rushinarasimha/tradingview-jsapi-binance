@@ -24,7 +24,13 @@ else if (process.argv[2] == "save"){
         console.log('Real Binance.com Listening on 9089')
     })
 }
-else
+else if (process.argv[2] == "receive"){
+    app.use('/', proxy('http://localhost:3003'))
+    app.listen(3137, () => {
+        console.log('receive data Listening on 3137')
+    })
+}
+else if(process.argv[2] == 'binance')
 {
 
     app.use('/', proxy('https://fapi.binance.com'))
