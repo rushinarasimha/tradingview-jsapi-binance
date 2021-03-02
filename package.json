@@ -6,16 +6,21 @@
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "express-http-proxy": "^1.2.0",
-    "morgan": "^1.9.0"
+    "forever": "^3.0.4",
+    "morgan": "^1.9.0",
+    "pm2": "^4.5.5"
   },
   "devDependencies": {},
   "scripts": {
     "binance": "node binance-proxy.js binance",
     "testnet": "node binance-proxy.js testnet",
     "save": "node binance-proxy.js save",
-    "receive": "node binance-proxy.js receive",
+    "receive": "node binance-proxy.js receiveTestNet",
+    "receiveBinance": "node binance-proxy.js receiveBinance",
+    
     "tunnel": "lt --port 3003 --subdomain vedic3",
     "tunnel137": "lt --port 3137 --subdomain vedic137",
+    "tunnel1137": "lt --port 1137 --subdomain vedic1137",
     "serve": "http-server -p 8080 -c-1"
   },
   "repository": {

@@ -24,10 +24,16 @@ else if (process.argv[2] == "save"){
         console.log('Real Binance.com Listening on 9089')
     })
 }
-else if (process.argv[2] == "receive"){
+else if (process.argv[2] == "receiveTestNet"){
     app.use('/', proxy('http://localhost:3003'))
     app.listen(3137, () => {
         console.log('receive data Listening on 3137')
+    })
+}
+else if (process.argv[2] == "receiveBinance"){
+    app.use('/', proxy('http://localhost:3013'))
+    app.listen(1137, () => {
+        console.log('receive data Listening on 1137')
     })
 }
 else if(process.argv[2] == 'binance')
