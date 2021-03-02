@@ -15,6 +15,21 @@ pm2.start({
     pm2.disconnect()
     if (err) { throw err }
   })
+  pm2.start({
+    script: 'cd /Users/rushi/Documents/charting_library', //https://vedic137two.loca.lt
+    autorestart : false 
+  }, (err, apps) => {
+    pm2.disconnect()
+    if (err) { throw err }
+  })
+
+  pm2.start({
+    script: 'nodeman --exec npx serve', //https://vedic137two.loca.lt
+    autorestart : false 
+  }, (err, apps) => {
+    pm2.disconnect()
+    if (err) { throw err }
+  })
 
 /*////////////////////////////////////
 

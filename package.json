@@ -17,10 +17,10 @@
     "save": "node binance-proxy.js save",
     "receive": "node binance-proxy.js receiveTestNet",
     "receiveBinance": "node binance-proxy.js receiveBinance",
-    
-    "tunnel": "lt --port 3003 --subdomain vedic3",
     "tunnel137": "lt --port 3137 --subdomain vedic137",
     "tunnel1137": "lt --port 1137 --subdomain vedic1137",
+
+    "tunnel": "lt --port 3003 --subdomain vedic3",
     "serve": "http-server -p 8080 -c-1"
   },
   "repository": {
