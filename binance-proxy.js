@@ -25,15 +25,27 @@ else if (process.argv[2] == "save"){
     })
 }
 else if (process.argv[2] == "receiveTestNet"){
-    app.use('/', proxy('http://localhost:3003'))
-    app.listen(3137, () => {
-        console.log('receive data Listening on 3137')
+    app.use('/', proxy('http://localhost:3333'))
+    app.listen(4137, () => {
+        console.log('receive TestNet  4137')
+    })
+}
+else if (process.argv[2] == "receiveTestNetBackTesting"){
+    app.use('/', proxy('http://localhost:3337'))
+    app.listen(5137, () => {
+        console.log('receiveTestNetBackTesting TestNet on 5137')
     })
 }
 else if (process.argv[2] == "receiveBinance"){
     app.use('/', proxy('http://localhost:3013'))
     app.listen(1137, () => {
-        console.log('receive data Listening on 1137')
+        console.log('receive Binance on 1137')
+    })
+}
+else if (process.argv[2] == "receiveBinanceBackTesting"){
+    app.use('/', proxy('http://localhost:3037'))
+    app.listen(5037, () => {
+        console.log('receive Binance on 5037')
     })
 }
 else if(process.argv[2] == 'binance')

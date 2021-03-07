@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Sample implementation of TradingView Charting Library JS API for Binance exchange",
   "dependencies": {
+    "child_process": "^1.0.2",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "express-http-proxy": "^1.2.0",
@@ -16,10 +17,10 @@
     "testnet": "node binance-proxy.js testnet",
     "save": "node binance-proxy.js save",
     "receive": "node binance-proxy.js receiveTestNet",
+    "receiveBackTesting": "node binance-proxy.js receiveTestNetBackTesting",
     "receiveBinance": "node binance-proxy.js receiveBinance",
-    "tunnel137": "lt --port 3137 --subdomain vedic137",
+    "tunnel137": "lt --port 4137 --subdomain vedic137_TestNet",
     "tunnel1137": "lt --port 1137 --subdomain vedic1137",
-
     "tunnel": "lt --port 3003 --subdomain vedic3",
     "serve": "http-server -p 8080 -c-1"
   },
