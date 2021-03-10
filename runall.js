@@ -20,27 +20,27 @@ pm2.start({
   })*/
 
   function main() {
-    SpawnNPXServe(`ls`)
-    SpawnNPXServe(`cd /Users/rushi/Documents/charting_library && node runforever.js`)
+    SpawnCmd(`ls`)
+    SpawnCmd(`cd /Users/rushi/Documents/charting_library && node runforever.js`)
     
   
-     SpawnNPXServe('node binance-proxy.js save')    
-     SpawnNPXServe('node binance-proxy.js binance')     
-     SpawnNPXServe('node binance-proxy.js testnet')
+    SpawnCmd('node binance-proxy.js save', true)    
+    SpawnCmd('node binance-proxy.js binance', true)     
+    SpawnCmd('node  --max-old-space-size=2048 binance-proxy.js testnet', true)
   
-     SpawnNPXServe('node binance-proxy.js receiveTestNet')
-     SpawnNPXServe('node binance-proxy.js receiveTestNetBackTesting')
-     SpawnNPXServe('node binance-proxy.js receiveBinance')
-     SpawnNPXServe('npm run tunnel1137')
-     SpawnNPXServe('npm run tunnel137')
-     SpawnNPXServe('"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --args --profile-directory="/Users/rushi/Library/Application Support/Google/Chrome/Profile 5"')
+    SpawnCmd('node binance-proxy.js receiveTestNet', true)
+    SpawnCmd('node binance-proxy.js receiveTestNetBackTesting', true)
+    SpawnCmd('node binance-proxy.js receiveBinance', true)
+    SpawnCmd('npm run tunnel1137', true)
+    SpawnCmd('npm run tunnel137', true)
+    SpawnCmd('"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --args --profile-directory="/Users/rushi/Library/Application Support/Google/Chrome/Profile 5"')
 
   }
 
 
 main()
 
-function SpawnNPXServe(cmd) {
+function SpawnCmd(cmd, forever) {
   setTimeout(function () {
 
     exec(cmd, function (error, stdout, stderr) {
@@ -50,11 +50,13 @@ function SpawnNPXServe(cmd) {
 
         console.log('RUSHI - You SUCCESSFULLY CAUGHT THIS EXIT ERROR !exec error: ', error);
 
+        if(forever) {
         setTimeout(function () {
-         // SpawnNPXServe(cmd)
+          SpawnCmd(cmd)
           console.log('RESPAWNED THE SERVER AGAIN !!!! ')
         }, 1000)
 
+      }
       }
     })
   }, 1000)
