@@ -20,16 +20,20 @@ pm2.start({
   })*/
 
   function main() {
-    SpawnNPXServe('node binance-proxy.js save')    
-    SpawnNPXServe('node binance-proxy.js binance')     
-    SpawnNPXServe('node binance-proxy.js testnet')
+    SpawnNPXServe(`ls`)
+    SpawnNPXServe(`cd /Users/rushi/Documents/charting_library && node runforever.js`)
+    
   
-    SpawnNPXServe('node binance-proxy.js receiveTestNet')
-    SpawnNPXServe('node binance-proxy.js receiveTestNetBackTesting')
-    SpawnNPXServe('node binance-proxy.js receiveBinance')
-    SpawnNPXServe('npm run tunnel1137')
-    SpawnNPXServe('npm run tunnel137')
-   // SpawnNPXServe('')
+     SpawnNPXServe('node binance-proxy.js save')    
+     SpawnNPXServe('node binance-proxy.js binance')     
+     SpawnNPXServe('node binance-proxy.js testnet')
+  
+     SpawnNPXServe('node binance-proxy.js receiveTestNet')
+     SpawnNPXServe('node binance-proxy.js receiveTestNetBackTesting')
+     SpawnNPXServe('node binance-proxy.js receiveBinance')
+     SpawnNPXServe('npm run tunnel1137')
+     SpawnNPXServe('npm run tunnel137')
+     SpawnNPXServe('"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --args --profile-directory="/Users/rushi/Library/Application Support/Google/Chrome/Profile 5"')
 
   }
 
@@ -47,7 +51,7 @@ function SpawnNPXServe(cmd) {
         console.log('RUSHI - You SUCCESSFULLY CAUGHT THIS EXIT ERROR !exec error: ', error);
 
         setTimeout(function () {
-          SpawnNPXServe(cmd)
+         // SpawnNPXServe(cmd)
           console.log('RESPAWNED THE SERVER AGAIN !!!! ')
         }, 1000)
 
