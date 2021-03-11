@@ -26,13 +26,13 @@ pm2.start({
   
     SpawnCmd('node binance-proxy.js save', true)    
     SpawnCmd('node binance-proxy.js binance', true)     
-    SpawnCmd('node  --max-old-space-size=2048 binance-proxy.js testnet', true)
+    //SpawnCmd('node  --max-old-space-size=8192 binance-proxy.js testnet', true)
   
     SpawnCmd('node binance-proxy.js receiveTestNet', true)
     SpawnCmd('node binance-proxy.js receiveTestNetBackTesting', true)
     SpawnCmd('node binance-proxy.js receiveBinance', true)
-    SpawnCmd('npm run tunnel1137', true)
-    SpawnCmd('npm run tunnel137', true)
+   // SpawnCmd('npm run tunnel1137', true)
+   // SpawnCmd('npm run tunnel137', true)
     SpawnCmd('"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --args --profile-directory="/Users/rushi/Library/Application Support/Google/Chrome/Profile 5"')
 
   }
