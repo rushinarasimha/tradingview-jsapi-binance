@@ -18,6 +18,60 @@ if(process.argv[2] == 'testnet')
     })
      
 }
+
+else if(process.argv[2] == 'testnet8089')
+{
+    app.use('/',proxy('https://testnet.binancefuture.com'))
+    app.listen(8089, () => {
+        console.log('Testnet Listening on 8089')
+    })
+     
+}
+
+else if(process.argv[2] == 'testnet8189')
+{
+    app.use('/',proxy('https://testnet.binancefuture.com'))
+    app.listen(8189, () => {
+        console.log('Testnet Listening on 8189')
+    })
+     
+}
+
+else if(process.argv[2] == 'testnet8289')
+{
+    app.use('/',proxy('https://testnet.binancefuture.com'))
+    app.listen(8289, () => {
+        console.log('Testnet Listening on 8289')
+    })
+     
+}
+
+else if(process.argv[2] == 'testnet8389')
+{
+    app.use('/',proxy('https://testnet.binancefuture.com'))
+    app.listen(8389, () => {
+        console.log('Testnet Listening on 8389')
+    })
+     
+}
+
+else if(process.argv[2] == 'testnet8489')
+{
+    app.use('/',proxy('https://testnet.binancefuture.com'))
+    app.listen(8489, () => {
+        console.log('Testnet Listening on 8489')
+    })
+     
+}
+
+else if(process.argv[2] == 'testnet8589')
+{
+    app.use('/',proxy('https://testnet.binancefuture.com'))
+    app.listen(8589, () => {
+        console.log('Testnet Listening on 8589')
+    })
+     
+}
 else if (process.argv[2] == "save"){
     app.use('/', proxy('http://saveload.tradingview.com'))
     app.listen(9089, () => {
