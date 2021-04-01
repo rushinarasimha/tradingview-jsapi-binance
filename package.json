@@ -21,6 +21,7 @@
     "receiveBinance": "node binance-proxy.js receiveBinance",
     "tunnel137": "lt --port 4137 --subdomain vedic137_TestNet",
     "tunnel1137": "lt --port 1137 --subdomain vedic1137",
+    
     "tunnel": "lt --port 3003 --subdomain vedic3",
     "serve": "http-server -p 8080 -c-1"
   },

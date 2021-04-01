@@ -18,7 +18,16 @@ if(process.argv[2] == 'testnet')
     })
      
 }
+else if(process.argv[2] == 'binance9091')
+{
 
+    app.use('/', proxy('https://fapi.binance.com'))
+    
+    app.listen(9091, () => {
+        console.log('Real Binance.com Listening on 9091')
+    })
+
+}
 else if(process.argv[2] == 'testnet8089')
 {
     app.use('/',proxy('https://testnet.binancefuture.com'))
@@ -101,14 +110,4 @@ else if (process.argv[2] == "receiveBinanceBackTesting"){
     app.listen(5037, () => {
         console.log('receive Binance on 5037')
     })
-}
-else if(process.argv[2] == 'binance')
-{
-
-    app.use('/', proxy('https://fapi.binance.com'))
-    
-    app.listen(9091, () => {
-        console.log('Real Binance.com Listening on 9091')
-    })
-
 }

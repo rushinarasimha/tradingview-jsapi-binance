@@ -25,8 +25,8 @@ pm2.start({
     
   
     SpawnCmd('node binance-proxy.js save', true)    
-    SpawnCmd('node binance-proxy.js binance', true)     
-    //SpawnCmd('node  --max-old-space-size=8192 binance-proxy.js testnet', true)
+    SpawnCmd('node binance-proxy.js binance9091', true)     
+    SpawnCmd('node binance-proxy.js testnet', true)
     SpawnCmd('node binance-proxy.js testnet8089', true)     
     SpawnCmd('node binance-proxy.js testnet8189', true)     
     SpawnCmd('node binance-proxy.js testnet8289', true)     
