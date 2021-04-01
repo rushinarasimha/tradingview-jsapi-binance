@@ -45,9 +45,22 @@ pm2.start({
     SpawnCmd('"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --args --profile-directory="/Users/rushi/Library/Application Support/Google/Chrome/Profile 5"')
 
   }
+function main_kirpal_windows() {
+	
+	   SpawnCmd('node binance-proxy.js save', true)    
+       SpawnCmd('node binance-proxy.js binance9091', true)     
+	   SpawnCmd('node binance-proxy.js receiveBinance', true)
+	   SpawnCmd('node binance-proxy.js proxy kirpal3013 3013', true)
+	   SpawnCmd('lt -p 5000 -s kirpal3013live', true)
+	   
+	  SpawnCmd(`cd ../TechnicalAnalysisCharts && node runforever.js`)
+	   
+}
 
+console.log("rushi starting trading services....")
+//main()
+main_kirpal_windows()
 
-main()
 
 function SpawnCmd(cmd, forever) {
   setTimeout(function () {

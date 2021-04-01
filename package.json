@@ -8,6 +8,8 @@
     "express": "^4.16.3",
     "express-http-proxy": "^1.2.0",
     "forever": "^3.0.4",
+    "localtunnel": "^2.0.1",
+    "lt": "^0.3.3",
     "morgan": "^1.9.0",
     "pm2": "^4.5.5"
   },
@@ -21,7 +23,6 @@
     "receiveBinance": "node binance-proxy.js receiveBinance",
     "tunnel137": "lt --port 4137 --subdomain vedic137_TestNet",
     "tunnel1137": "lt --port 1137 --subdomain vedic1137",
-    
     "tunnel": "lt --port 3003 --subdomain vedic3",
     "serve": "http-server -p 8080 -c-1"
   },

@@ -28,6 +28,19 @@ else if(process.argv[2] == 'binance9091')
     })
 
 }
+else if(process.argv[2] == 'proxy')
+{
+
+
+   let proxyUrl = `https://${process.argv[3]}.loca.lt`
+   let proxyPort = process.argv[4]
+    app.use('/', proxy(proxyUrl))
+    
+    app.listen(proxyPort, () => {
+        console.log(`Running Proxy for CORS Redirection on port ${proxyPort} for url ${proxyUrl}`)
+    })
+
+}
 else if(process.argv[2] == 'testnet8089')
 {
     app.use('/',proxy('https://testnet.binancefuture.com'))
