@@ -49,7 +49,7 @@ function main_kirpal_windows() {
 	
 	   SpawnCmd('node binance-proxy.js save', true)    
        SpawnCmd('node binance-proxy.js binance9091', true)     
-	   SpawnCmd('node binance-proxy.js receiveBinance', true)
+	  // SpawnCmd('node binance-proxy.js receiveBinance', true)
 	   SpawnCmd('node binance-proxy.js proxy kirpal3013 3013', true)
 	   SpawnCmd('lt -p 5000 -s kirpal3013live', true)
 	   
