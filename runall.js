@@ -42,7 +42,7 @@ pm2.start({
     SpawnCmd('node binance-proxy.js receiveBinance', true)
    // SpawnCmd('npm run tunnel1137', true)
    // SpawnCmd('npm run tunnel137', true)
-    SpawnCmd('"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --args --profile-directory="/Users/rushi/Library/Application Support/Google/Chrome/Profile 5"')
+    SpawnCmd('"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --args --profile-directory="/Users/rushi/Library/Application Support/Google/Chrome/Profile 5"', true)
 
   }
 function main_kirpal_windows() {
@@ -74,7 +74,7 @@ function SpawnCmd(cmd, forever) {
 
         if(forever) {
         setTimeout(function () {
-          SpawnCmd(cmd)
+          SpawnCmd(cmd, true)
           console.log('RESPAWNED THE SERVER AGAIN !!!! ')
         }, 1000)
 
